@@ -1,0 +1,205 @@
+/*
+................................
+1 => --Build Container 
+2 => --Build Face 
+3 => --Build Nose 
+4 => --Build Eye 
+5 => --Build Eye2
+5 => --Build hair
+................................
+*/
+
+/* #### START VARIABLE #### */
+:root {
+  --main-color--: #fce2c4;
+  --border-color--: #ffa945;
+}
+/* #### END VARIABLE #### */
+
+/* #### BUILD CONTAINER #### */
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 20px 20px 10px #d7d7d7d7;
+}
+
+/* #### BUILD FACE #### */
+.face {
+  position: relative;
+  top: 100px;
+  left: 220px;
+  width: 60px;
+  height: 250px;
+  background-color: var(--main-color--);
+  border: 4px solid var(--border-color--);
+  border-bottom: none;
+  transform: rotate(4deg);
+}
+
+.face::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 170px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--main-color--);
+  border-left: 6px solid var(--border-color--);
+  border-bottom: 4px solid var(--border-color--);
+  border-bottom-left-radius: 10px;
+  transform: skew(-40deg);
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  left: 56px;
+  top: 80px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color--);
+  border: 4px solid var(--border-color--);
+  border-left: none;
+  border-top: none;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+
+/* #### BUILD NOSE #### */
+.nose {
+  position: relative;
+  left: 172px;
+  bottom: 90px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color--);
+  border: 4px solid var(--border-color--);
+  border-radius: 14px 0 0 14px;
+  border-right: none;
+  transform: rotate(4deg);
+  z-index: 1;
+}
+.nose::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -4px;
+  height: 10px;
+  width: 30px;
+  background-color: var(--main-color--);
+  border-top: 4px solid var(--border-color--);
+}
+
+/* #### BUILD EYE #### */
+.eye {
+  position: relative;
+  left: 205px;
+  bottom: 188px;
+  height: 44px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid black;
+  z-index: 0;
+  transform: rotate(4deg);
+}
+.eye::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  left: 14px;
+  top: 22px;
+  transform: rotate(16deg);
+}
+.eye::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  background-color: white;
+  border-radius: 50%;
+  left: 18px;
+  top: 24px;
+}
+
+/* #### BUILD EYE2 #### */
+.eye2 {
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  bottom: 224px;
+  left: 234px;
+}
+.eye2::before {
+  top: 12px;
+}
+.eye2::after {
+  top: 14px;
+}
+
+/* #### BUILD HAIR #### */
+.hair {
+  position: relative;
+  z-index: 100;
+  left: 10px;
+  bottom: 252px;
+}
+.hair > div:nth-child(1) {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  border-top: 20px solid green;
+  left: 180px;
+  bottom: 40px;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(30deg);
+}
+.hair > div:nth-child(2) {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  border-top: 20px solid green;
+  left: 200px;
+  bottom: 40px;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(70deg);
+}
+.hair > div:nth-child(3) {
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  border-top: 20px solid green;
+  left: 220px;
+  bottom: 50px;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(130deg);
+}
+.hair > div:nth-child(4) {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  border-top: 20px solid green;
+  left: 200px;
+  bottom: 20px;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(20deg);
+}
+.hair > div:nth-child(5) {
+  position: absolute;
+  height: 30px;
+  width: 50px;
+  border-top: 20px solid green;
+  left: 260px;
+  bottom: 20px;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(10deg);
+}
